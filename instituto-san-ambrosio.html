@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instituto San Ambrosio — Formación integral desde 1998</title>
+<meta name="description" content="Instituto San Ambrosio: educación secundaria, profesorados y tecnicaturas basados en el pensamiento efectivo, las inteligencias múltiples y la enseñanza para la comprensión.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16233D;
+    --ink-soft:#3E4E6D;
+    --paper:#F6F2E9;
+    --paper-dim:#EDE7D8;
+    --bronze:#B8863B;
+    --bronze-deep:#8E6423;
+    --sage:#55684F;
+    --sage-deep:#3F4C3B;
+    --brick:#8B3A2B;
+    --line: rgba(22,35,61,0.14);
+    --line-light: rgba(246,242,233,0.22);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Public Sans', sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
+  .eyebrow{
+    font-family:'Public Sans',sans-serif;
+    font-size:12.5px;
+    font-weight:600;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--bronze-deep);
+  }
+  .eyebrow.on-dark{color:#D9B577;}
+  .eyebrow.on-sage{color:#D9E2CD;}
+
+  /* ---------- Skip link / focus ---------- */
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--bronze);
+    outline-offset:3px;
+  }
+  .skip-link{
+    position:absolute; left:-999px; top:auto;
+    background:var(--ink); color:#fff; padding:10px 16px; z-index:200;
+  }
+  .skip-link:focus{ left:16px; top:16px; }
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky; top:0; z-index:100;
+    background:rgba(22,35,61,0.97);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line-light);
+  }
+  .nav-row{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 32px; max-width:1180px; margin:0 auto;
+  }
+  .brand{
+    display:flex; align-items:center; gap:12px;
+    color:#F6F2E9;
+  }
+  .brand-mark{
+    width:38px;height:38px;flex:none;
+  }
+  .brand-name{
+    font-family:'Fraunces', serif;
+    font-size:19px;
+    letter-spacing:0.01em;
+    line-height:1.1;
+  }
+  .brand-name small{
+    display:block;
+    font-family:'Public Sans',sans-serif;
+    font-size:10.5px;
+    letter-spacing:0.14em;
+    color:#B8863B;
+    font-weight:600;
+    margin-top:2px;
+  }
+  nav.primary{
+    display:flex; align-items:center; gap:30px;
+  }
+  nav.primary a{
+    color:#E7E2D3; font-size:14.5px; font-weight:500;
+    position:relative; padding:6px 0;
+  }
+  nav.primary a::after{
+    content:"";
+    position:absolute; left:0; bottom:0; height:1px; width:0;
+    background:var(--bronze);
+    transition:width .25s ease;
+  }
+  nav.primary a:hover::after, nav.primary a:focus-visible::after{width:100%;}
+  .nav-cta{
+    background:var(--bronze);
+    color:var(--ink)!important;
+    padding:9px 18px;
+    border-radius:2px;
+    font-weight:700!important;
+    font-size:13.5px!important;
+    letter-spacing:0.03em;
+  }
+  .nav-cta::after{display:none;}
+  .nav-toggle{display:none;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    background:var(--ink);
+    color:var(--paper);
+    overflow:hidden;
+    padding:96px 0 0;
+  }
+  .hero-grid{
+    display:grid; grid-template-columns:1.1fr 0.9fr; gap:40px; align-items:center;
+  }
+  .hero-copy{padding-bottom:100px;}
+  .hero h1{
+    font-size:clamp(2.4rem, 4.6vw, 3.7rem);
+    line-height:1.06;
+    margin-top:18px;
+    color:#FBF8F1;
+  }
+  .hero h1 em{
+    font-style:italic;
+    color:var(--bronze);
+  }
+  .hero p.lede{
+    max-width:46ch;
+    margin-top:22px;
+    color:#C9CEDA;
+    font-size:17px;
+  }
+  .hero-actions{
+    display:flex; gap:16px; margin-top:34px; flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:13px 24px;
+    font-size:14.5px; font-weight:700;
+    border-radius:2px;
+    letter-spacing:0.02em;
+    border:1px solid transparent;
+    transition:transform .18s ease, background .18s ease, color .18s ease;
+  }
+  .btn-solid{background:var(--bronze); color:var(--ink);}
+  .btn-solid:hover{background:#CC9743; transform:translateY(-1px);}
+  .btn-ghost{border-color:rgba(246,242,233,0.4); color:var(--paper);}
+  .btn-ghost:hover{border-color:var(--bronze); color:var(--bronze); transform:translateY(-1px);}
+
+  .hero-columns{
+    position:relative;
+    height:100%;
+    min-height:420px;
+  }
+  .hero-columns svg{
+    position:absolute;
+    bottom:0; left:0;
+    width:100%; height:auto;
+  }
+
+  /* ---------- Banner ribbon ---------- */
+  .ribbon{
+    background:var(--bronze);
+    color:var(--ink);
+  }
+  .ribbon .wrap{
+    display:flex; align-items:center; gap:18px; flex-wrap:wrap;
+    padding:15px 32px;
+  }
+  .ribbon strong{font-weight:700;}
+  .ribbon-tag{
+    background:var(--ink); color:var(--bronze);
+    font-size:11px; font-weight:700; letter-spacing:0.1em;
+    padding:4px 10px; border-radius:2px; text-transform:uppercase;
+    flex:none;
+  }
+  .ribbon a{
+    margin-left:auto; font-weight:700; font-size:14px;
+    border-bottom:1px solid var(--ink); flex:none;
+  }
+
+  section{padding:96px 0;}
+  .section-tight{padding:72px 0;}
+
+  /* ---------- Mission ---------- */
+  .mission{
+    text-align:center;
+  }
+  .mission .eyebrow{display:block; margin-bottom:18px;}
+  .mission h2{
+    font-size:clamp(1.7rem, 3.4vw, 2.5rem);
+    max-width:22ch;
+    margin:0 auto;
+    line-height:1.22;
+    font-weight:500;
+  }
+  .mission h2 .accent{color:var(--bronze-deep); font-style:italic;}
+  .mission-rule{
+    width:64px; height:2px; background:var(--bronze);
+    margin:32px auto 0;
+  }
+
+  /* ---------- Pillars (signature colonnade) ---------- */
+  .pillars{
+    background:var(--paper-dim);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .pillars-head{
+    text-align:center; max-width:640px; margin:0 auto 56px;
+  }
+  .pillars-head h2{font-size:clamp(1.5rem,2.8vw,2rem); margin-top:14px;}
+  .colonnade{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:36px; align-items:end;
+  }
+  .colonnade-item{text-align:center;}
+  .colonnade-item svg{width:100%; height:auto; max-width:180px; margin:0 auto;}
+  .colonnade-item h3{
+    font-size:19px; margin-top:22px; font-weight:600;
+  }
+  .colonnade-item p{
+    font-size:14.5px; color:var(--ink-soft); margin-top:8px; max-width:30ch; margin-left:auto; margin-right:auto;
+  }
+
+  /* ---------- Programs ---------- */
+  .programs-head{
+    display:flex; justify-content:space-between; align-items:flex-end; gap:24px; flex-wrap:wrap;
+    margin-bottom:48px;
+  }
+  .programs-head h2{font-size:clamp(1.7rem,3vw,2.3rem); margin-top:12px; max-width:16ch;}
+  .programs-head p{max-width:38ch; color:var(--ink-soft); font-size:15px;}
+  .program-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+  }
+  .program-card{
+    background:var(--paper);
+    padding:34px 28px;
+    display:flex; flex-direction:column; gap:14px;
+    min-height:230px;
+    transition:background .2s ease;
+  }
+  .program-card:hover{background:var(--paper-dim);}
+  .program-num{
+    font-family:'Fraunces',serif; font-style:italic; font-size:15px; color:var(--bronze-deep);
+  }
+  .program-card h3{font-size:20px; font-weight:600;}
+  .program-card p{font-size:14.5px; color:var(--ink-soft); flex:1;}
+  .program-card .go{
+    font-size:13.5px; font-weight:700; letter-spacing:0.02em;
+    display:inline-flex; align-items:center; gap:6px;
+    color:var(--ink);
+    border-bottom:1px solid var(--bronze);
+    width:fit-content;
+  }
+
+  /* ---------- Values ribbon ---------- */
+  .values{
+    background:var(--sage);
+    color:#F3F5EE;
+  }
+  .values .wrap{
+    display:grid; grid-template-columns:repeat(3,1fr);
+  }
+  .value-item{
+    padding:52px 30px;
+    border-left:1px solid rgba(243,245,238,0.22);
+  }
+  .value-item:first-child{border-left:none;}
+  .value-item h3{
+    font-size:21px; margin-top:12px; color:#fff;
+  }
+  .value-item p{font-size:14.5px; color:#DCE4D2; margin-top:10px;}
+
+  /* ---------- Sport ---------- */
+  .sport{
+    display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center;
+  }
+  .sport-copy p{color:var(--ink-soft); margin-top:18px; font-size:15.5px;}
+  .sport-copy h2{font-size:clamp(1.6rem,2.8vw,2.2rem); margin-top:14px;}
+  .sport-art{
+    position:relative;
+    aspect-ratio:4/3.1;
+    background:var(--ink);
+    overflow:hidden;
+  }
+  .sport-art svg{position:absolute; inset:0; width:100%; height:100%;}
+
+  /* ---------- Location / contact ---------- */
+  .location{
+    background:var(--ink); color:var(--paper);
+  }
+  .location-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:0;
+  }
+  .location-copy{padding:88px 56px 88px 0;}
+  .location-copy h2{font-size:clamp(1.6rem,2.8vw,2.2rem); margin-top:14px; color:#FBF8F1;}
+  .location-copy p{color:#C9CEDA; margin-top:16px; max-width:42ch;}
+  .contact-list{margin-top:32px; display:flex; flex-direction:column; gap:16px;}
+  .contact-list div{
+    display:flex; gap:14px; align-items:flex-start; font-size:14.5px; color:#E7E2D3;
+  }
+  .contact-list span.label{
+    font-weight:700; color:var(--bronze); min-width:78px; letter-spacing:0.03em; font-size:12px; text-transform:uppercase; margin-top:3px;
+  }
+  .map-frame{
+    border:none; width:100%; height:100%; min-height:420px; filter:grayscale(0.3) contrast(1.05);
+  }
+
+  /* ---------- Footer ---------- */
+  footer{
+    background:#101A2E; color:#B7BFCF; padding:64px 0 28px;
+  }
+  .footer-grid{
+    display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px;
+    padding-bottom:44px; border-bottom:1px solid rgba(255,255,255,0.08);
+  }
+  .footer-brand .brand-name{color:#F6F2E9;}
+  .footer-brand p{margin-top:16px; font-size:14px; max-width:32ch; color:#8D96A8;}
+  footer h4{
+    font-family:'Public Sans',sans-serif; font-size:12.5px; letter-spacing:0.12em;
+    text-transform:uppercase; color:#7A8398; font-weight:700; margin-bottom:16px;
+  }
+  footer ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:11px;}
+  footer ul a{font-size:14.5px; color:#C7CDDA;}
+  footer ul a:hover{color:var(--bronze);}
+  .footer-bottom{
+    display:flex; justify-content:space-between; align-items:center; padding-top:24px;
+    font-size:13px; color:#69728A; flex-wrap:wrap; gap:12px;
+  }
+  .footer-bottom a{color:#69728A;}
+  .footer-bottom a:hover{color:var(--bronze);}
+
+  @media (max-width: 880px){
+    nav.primary{display:none;}
+    .hero-grid{grid-template-columns:1fr;}
+    .hero-columns{display:none;}
+    .colonnade{grid-template-columns:1fr; gap:48px;}
+    .program-grid{grid-template-columns:1fr;}
+    .values .wrap{grid-template-columns:1fr;}
+    .value-item{border-left:none; border-top:1px solid rgba(243,245,238,0.22); padding:36px 0;}
+    .value-item:first-child{border-top:none;}
+    .sport{grid-template-columns:1fr;}
+    .location-grid{grid-template-columns:1fr;}
+    .location-copy{padding:64px 32px 40px;}
+    .footer-grid{grid-template-columns:1fr 1fr; row-gap:32px;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{transition:none!important;}
+  }
+</style>
+</head>
+<body>
+<a href="#contenido" class="skip-link">Saltar al contenido</a>
+
+<header>
+  <div class="nav-row">
+    <a href="#top" class="brand" aria-label="Instituto San Ambrosio - inicio">
+      <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="4" y="30" width="32" height="4" fill="#F6F2E9"/>
+        <rect x="6" y="14" width="4" height="16" fill="#B8863B"/>
+        <rect x="18" y="14" width="4" height="16" fill="#B8863B"/>
+        <rect x="30" y="14" width="4" height="16" fill="#B8863B"/>
+        <path d="M2 14L20 4L38 14H2Z" fill="#F6F2E9"/>
+      </svg>
+      <span class="brand-name">Instituto San Ambrosio<small>DESDE 1998 · CABA</small></span>
+    </a>
+    <nav class="primary" aria-label="Navegación principal">
+      <a href="#pilares">Nuestra propuesta</a>
+      <a href="#niveles">Niveles</a>
+      <a href="#deporte">Deporte</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#" class="nav-cta">Admisiones</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow on-dark">Educación secundaria · profesorados · tecnicaturas</span>
+        <h1>Formamos a quienes van a <em>enseñar, cuidar y construir</em> el futuro.</h1>
+        <p class="lede">En San Ambrosio aprender enseñando es el método: cada estudiante se forma para pensar con criterio propio, comprender en profundidad y actuar con valores.</p>
+        <div class="hero-actions">
+          <a href="#niveles" class="btn btn-solid">Ver niveles y carreras</a>
+          <a href="#contacto" class="btn btn-ghost">Hablar con admisiones</a>
+        </div>
+      </div>
+      <div class="hero-columns" aria-hidden="true">
+        <svg viewBox="0 0 480 460" xmlns="http://www.w3.org/2000/svg">
+          <rect x="20" y="410" width="440" height="14" fill="#F6F2E9" opacity="0.9"/>
+          <rect x="30" y="70" width="440" height="16" fill="#F6F2E9" opacity="0.85"/>
+          <g opacity="0.9">
+            <rect x="60" y="86" width="26" height="324" fill="#B8863B"/>
+            <rect x="150" y="86" width="26" height="324" fill="#8E6423"/>
+            <rect x="240" y="86" width="26" height="324" fill="#B8863B"/>
+            <rect x="330" y="86" width="26" height="324" fill="#8E6423"/>
+            <rect x="420" y="86" width="26" height="324" fill="#B8863B"/>
+          </g>
+          <path d="M10 70L250 0L490 70H10Z" fill="#F6F2E9" opacity="0.85"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="ribbon">
+    <div class="wrap">
+      <span class="ribbon-tag">Nuevo convenio</span>
+      <span><strong>Alianza académica con UFLO:</strong> ahora la Licenciatura en Psicología se cursa con articulación directa desde nuestra Psicología Social.</span>
+      <a href="#niveles">Conocer el convenio →</a>
+    </div>
+  </div>
+
+  <!-- MISSION -->
+  <section class="mission">
+    <div class="wrap">
+      <span class="eyebrow">Nuestro propósito</span>
+      <h2>Formar personas <span class="accent">autónomas, reflexivas</span> y comprometidas con su propio aprendizaje.</h2>
+      <div class="mission-rule"></div>
+    </div>
+  </section>
+
+  <!-- PILLARS -->
+  <section class="pillars" id="pilares">
+    <div class="wrap">
+      <div class="pillars-head">
+        <span class="eyebrow">Tres pilares, una misma estructura</span>
+        <h2>Todo lo que enseñamos se sostiene sobre estas tres columnas.</h2>
+      </div>
+      <div class="colonnade">
+        <div class="colonnade-item">
+          <svg viewBox="0 0 160 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="20" y="196" width="120" height="14" fill="#16233D"/>
+            <rect x="60" y="30" width="40" height="166" fill="#B8863B"/>
+            <rect x="30" y="14" width="100" height="16" fill="#16233D"/>
+            <circle cx="80" cy="8" r="6" fill="#16233D"/>
+          </svg>
+          <h3>Pensamiento efectivo</h3>
+          <p>Herramientas concretas para razonar, decidir y resolver problemas reales, dentro y fuera del aula.</p>
+        </div>
+        <div class="colonnade-item">
+          <svg viewBox="0 0 160 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="20" y="196" width="120" height="14" fill="#16233D"/>
+            <rect x="60" y="30" width="40" height="166" fill="#8E6423"/>
+            <rect x="30" y="14" width="100" height="16" fill="#16233D"/>
+            <circle cx="80" cy="8" r="6" fill="#16233D"/>
+          </svg>
+          <h3>Inteligencias múltiples</h3>
+          <p>Reconocemos distintas formas de ser inteligente y diseñamos propuestas que las potencian a todas.</p>
+        </div>
+        <div class="colonnade-item">
+          <svg viewBox="0 0 160 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="20" y="196" width="120" height="14" fill="#16233D"/>
+            <rect x="60" y="30" width="40" height="166" fill="#B8863B"/>
+            <rect x="30" y="14" width="100" height="16" fill="#16233D"/>
+            <circle cx="80" cy="8" r="6" fill="#16233D"/>
+          </svg>
+          <h3>Enseñanza para la comprensión</h3>
+          <p>Se enseña para comprender, no para repetir: cada contenido se aplica, se explica y se transfiere.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMS -->
+  <section id="niveles">
+    <div class="wrap">
+      <div class="programs-head">
+        <div>
+          <span class="eyebrow">Oferta educativa</span>
+          <h2>Un camino desde la secundaria hasta la formación docente.</h2>
+        </div>
+        <p>Cinco propuestas pensadas para acompañar distintas etapas y vocaciones, todas bajo los mismos tres pilares.</p>
+      </div>
+      <div class="program-grid">
+        <a class="program-card" href="#">
+          <span class="program-num">01</span>
+          <h3>Secundario</h3>
+          <p>Formación integral con orientación en ciencias sociales, pensada para el ingreso a estudios superiores.</p>
+          <span class="go">Ver plan de estudios →</span>
+        </a>
+        <a class="program-card" href="#">
+          <span class="program-num">02</span>
+          <h3>Profesorado de Educación Inicial</h3>
+          <p>Título docente para acompañar los primeros años de aprendizaje con base pedagógica sólida.</p>
+          <span class="go">Ver plan de estudios →</span>
+        </a>
+        <a class="program-card" href="#">
+          <span class="program-num">03</span>
+          <h3>Psicología Social</h3>
+          <p>Formación con articulación directa hacia la Licenciatura en Psicología, en convenio con UFLO.</p>
+          <span class="go">Ver plan de estudios →</span>
+        </a>
+        <a class="program-card" href="#">
+          <span class="program-num">04</span>
+          <h3>Tramo Pedagógico</h3>
+          <p>Habilitación docente para profesionales que ya ejercen y buscan formalizar su rol en el aula.</p>
+          <span class="go">Ver plan de estudios →</span>
+        </a>
+        <a class="program-card" href="#">
+          <span class="program-num">05</span>
+          <h3>Carreras y tecnicaturas</h3>
+          <p>Propuestas técnicas de salida laboral rápida, con práctica profesional desde el primer año.</p>
+          <span class="go">Ver todas las carreras →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="values section-tight">
+    <div class="wrap">
+      <div class="value-item">
+        <span class="eyebrow on-sage">Valor 01</span>
+        <h3>Empatía</h3>
+        <p>Escuchamos antes de enseñar. Cada estudiante llega con una historia que el aula respeta.</p>
+      </div>
+      <div class="value-item">
+        <span class="eyebrow on-sage">Valor 02</span>
+        <h3>Colaboración</h3>
+        <p>Se aprende mejor en conjunto: el trabajo en equipo es parte del contenido, no un extra.</p>
+      </div>
+      <div class="value-item">
+        <span class="eyebrow on-sage">Valor 03</span>
+        <h3>Respeto</h3>
+        <p>Las diferencias se entienden como punto de partida, no como obstáculo para convivir.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPORT -->
+  <section id="deporte">
+    <div class="wrap sport">
+      <div class="sport-copy">
+        <span class="eyebrow">Más que un recreo</span>
+        <h2>El deporte también es prioridad institucional.</h2>
+        <p>Promovemos distintas disciplinas para fortalecer el trabajo en equipo, la perseverancia y la superación personal. A los alumnos federados los acompañamos con horarios flexibles y seguimiento pedagógico, para que competir y estudiar nunca sean cosas opuestas.</p>
+        <div class="hero-actions">
+          <a href="#contacto" class="btn btn-solid" style="background:var(--sage);color:#fff;">Conocer el programa deportivo</a>
+        </div>
+      </div>
+      <div class="sport-art" aria-hidden="true">
+        <svg viewBox="0 0 480 372" xmlns="http://www.w3.org/2000/svg">
+          <rect width="480" height="372" fill="#16233D"/>
+          <circle cx="380" cy="60" r="120" fill="#55684F" opacity="0.5"/>
+          <rect x="0" y="300" width="480" height="72" fill="#0F1830"/>
+          <line x1="0" y1="300" x2="480" y2="300" stroke="#F6F2E9" stroke-width="2" opacity="0.6"/>
+          <circle cx="240" cy="300" r="46" stroke="#F6F2E9" stroke-width="2" fill="none" opacity="0.6"/>
+          <line x1="240" y1="0" x2="240" y2="372" stroke="#F6F2E9" stroke-width="1.5" opacity="0.35"/>
+          <rect x="60" y="150" width="10" height="150" fill="#B8863B"/>
+          <rect x="410" y="180" width="10" height="120" fill="#B8863B"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION / CONTACT -->
+  <section class="location" id="contacto">
+    <div class="location-grid">
+      <div class="location-copy wrap" style="padding-left:32px;">
+        <span class="eyebrow on-dark">Visitanos</span>
+        <h2>¿Dónde encontrarnos?</h2>
+        <p>Coordiná una visita guiada por el instituto o escribinos por cualquiera de estos medios; el equipo de admisiones responde todos los días hábiles.</p>
+        <div class="contact-list">
+          <div><span class="label">Teléfono</span> (54-11) 4899-0577</div>
+          <div><span class="label">Email</span> contacto@institutosanambrosio.com</div>
+          <div><span class="label">Instagram</span> @insti.sanambrosio</div>
+        </div>
+        <div class="hero-actions">
+          <a href="#" class="btn btn-solid">Solicitar admisión</a>
+        </div>
+      </div>
+      <iframe class="map-frame" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.93222793666!2d-58.42666192444194!3d-34.580581356276454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb584b98b606f%3A0xb34013de3fb4e925!2sInstituto%20San%20Ambrosio!5e0!3m2!1ses!2sar!4v1725484526408!5m2!1ses!2sar"
+        title="Ubicación de Instituto San Ambrosio en el mapa"></iframe>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="brand-name">Instituto San Ambrosio</span>
+        <p>Formación integral desde la secundaria hasta la formación docente, con base en tres pilares educativos.</p>
+      </div>
+      <div>
+        <h4>Institucional</h4>
+        <ul>
+          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="#">Admisiones</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Niveles</h4>
+        <ul>
+          <li><a href="#niveles">Secundaria</a></li>
+          <li><a href="#niveles">Profesorado</a></li>
+          <li><a href="#niveles">Tecnicatura</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Seguinos</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/insti.sanambrosio/?hl=es" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="mailto:contacto@institutosanambrosio.com">Email</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Instituto San Ambrosio · Todos los derechos reservados.</span>
+      <a href="#top">Volver arriba ↑</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
