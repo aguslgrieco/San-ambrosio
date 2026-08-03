@@ -40,15 +40,58 @@
 
   <!-- HERO -->
   <section class="hero" id="top">
-    <div class="hero-media" aria-hidden="true">
-      <img src="fachada-hero.jpg" alt="" loading="eager">
-      <div class="hero-scrim"></div>
+    <div class="hero-carousel" id="heroCarousel">
+      <div class="hero-slide is-active">
+        <img src="fachada-hero.jpg" alt="" loading="eager">
+        <div class="hero-scrim"></div>
+        <div class="hero-slide-copy">
+          <span class="hero-pill">Inscripciones abiertas 2026</span>
+          <h1>Formate para transformar personas y comunidades.</h1>
+          <p class="lede">Profesorados · Psicología Social · Formación Pedagógica · Carreras con salida laboral.</p>
+        </div>
+      </div>
+      <div class="hero-slide">
+        <img src="secundaria-tile.jpg" alt="" loading="lazy">
+        <div class="hero-scrim"></div>
+        <div class="hero-slide-copy">
+          <p class="hero-slide-title">Educación de Calidad</p>
+          <p class="lede">La importancia de aprender enseñando.</p>
+        </div>
+      </div>
+      <div class="hero-slide">
+        <img src="profesorado-tile.jpg" alt="" loading="lazy">
+        <div class="hero-scrim"></div>
+        <div class="hero-slide-copy">
+          <p class="hero-slide-title">Formación Docente</p>
+          <p class="lede">Formamos educadores para transformar realidades.</p>
+        </div>
+      </div>
+      <div class="hero-slide">
+        <img src="tecnicatura-tile.jpg" alt="" loading="lazy">
+        <div class="hero-scrim"></div>
+        <div class="hero-slide-copy">
+          <p class="hero-slide-title">Formación Técnica</p>
+          <p class="lede">Práctica desde el primer año, con salida laboral rápida.</p>
+        </div>
+      </div>
+
+      <button class="hero-arrow hero-arrow-prev" id="heroPrev" aria-label="Foto anterior">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="hero-arrow hero-arrow-next" id="heroNext" aria-label="Foto siguiente">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+
+      <div class="hero-dots" id="heroDots">
+        <button class="hero-dot is-active" data-slide="0" aria-label="Ir a la diapositiva 1"></button>
+        <button class="hero-dot" data-slide="1" aria-label="Ir a la diapositiva 2"></button>
+        <button class="hero-dot" data-slide="2" aria-label="Ir a la diapositiva 3"></button>
+        <button class="hero-dot" data-slide="3" aria-label="Ir a la diapositiva 4"></button>
+      </div>
     </div>
-    <div class="wrap hero-inner centered">
-      <span class="hero-pill">Inscripciones abiertas 2026</span>
-      <h1>Formate para transformar personas y comunidades.</h1>
-      <p class="lede">Profesorados · Psicología Social · Formación Pedagógica · Carreras con salida laboral.</p>
-      <div class="hero-actions">
+
+    <div class="hero-actions-bar">
+      <div class="wrap hero-actions">
         <a href="#niveles" class="btn btn-solid">Ver niveles y carreras</a>
         <a href="#contacto" class="btn btn-ghost">Hablar con admisiones</a>
       </div>
@@ -127,24 +170,7 @@
     </div>
     <div class="level-tiles">
       <a class="level-tile" data-accent="bronze" href="secundaria.html">
-        <svg class="scene" viewBox="0 0 400 520" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-          <rect width="400" height="520" fill="#EDE7D8"/>
-          <rect x="0" y="0" width="400" height="140" fill="#16233D"/>
-          <rect x="40" y="40" width="320" height="70" fill="#3E4E6D"/>
-          <g fill="#16233D" opacity="0.9">
-            <rect x="30" y="220" width="80" height="46" rx="2"/>
-            <rect x="30" y="290" width="10" height="70"/>
-            <rect x="100" y="290" width="10" height="70"/>
-            <rect x="160" y="240" width="80" height="46" rx="2"/>
-            <rect x="160" y="310" width="10" height="70"/>
-            <rect x="230" y="310" width="10" height="70"/>
-            <rect x="290" y="220" width="80" height="46" rx="2"/>
-            <rect x="290" y="290" width="10" height="70"/>
-            <rect x="360" y="290" width="10" height="70"/>
-          </g>
-          <path d="M60 220 L60 180" stroke="#B8863B" stroke-width="8" stroke-linecap="round"/>
-          <path d="M310 220 L310 180" stroke="#B8863B" stroke-width="8" stroke-linecap="round"/>
-        </svg>
+        <img class="scene" src="secundaria-tile.jpg" alt="" aria-hidden="true">
         <div class="tint"></div>
         <span class="tile-eyebrow">Nivel medio</span>
         <div class="tile-label">
@@ -154,18 +180,7 @@
       </a>
 
       <a class="level-tile" data-accent="sage" href="profesorado.html">
-        <svg class="scene" viewBox="0 0 400 520" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-          <rect width="400" height="520" fill="#EDE7D8"/>
-          <rect x="0" y="0" width="400" height="140" fill="#16233D"/>
-          <rect x="40" y="36" width="320" height="76" fill="#2C3B58"/>
-          <path d="M60 60 L110 44 L160 60 L110 76 Z" fill="#B8863B"/>
-          <rect x="105" y="60" width="10" height="26" fill="#B8863B"/>
-          <rect x="150" y="230" width="100" height="120" rx="4" fill="#55684F"/>
-          <rect x="165" y="250" width="70" height="8" fill="#EDE7D8" opacity="0.8"/>
-          <rect x="165" y="268" width="70" height="8" fill="#EDE7D8" opacity="0.6"/>
-          <rect x="165" y="286" width="45" height="8" fill="#EDE7D8" opacity="0.6"/>
-          <rect x="140" y="360" width="120" height="10" fill="#16233D"/>
-        </svg>
+        <img class="scene" src="profesorado-tile.jpg" alt="" aria-hidden="true">
         <div class="tint"></div>
         <span class="tile-eyebrow">Formación docente</span>
         <div class="tile-label">
@@ -175,19 +190,7 @@
       </a>
 
       <a class="level-tile" data-accent="brick" href="tecnicatura.html">
-        <svg class="scene" viewBox="0 0 400 520" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-          <rect width="400" height="520" fill="#EDE7D8"/>
-          <rect x="0" y="0" width="400" height="140" fill="#16233D"/>
-          <rect x="40" y="46" width="320" height="56" fill="#4A2C22"/>
-          <circle cx="150" cy="280" r="54" fill="none" stroke="#8B3A2B" stroke-width="14"/>
-          <circle cx="150" cy="280" r="14" fill="#8B3A2B"/>
-          <rect x="140" y="196" width="20" height="26" fill="#8B3A2B"/>
-          <rect x="140" y="316" width="20" height="26" fill="#8B3A2B"/>
-          <rect x="64" y="270" width="26" height="20" fill="#8B3A2B"/>
-          <rect x="210" y="270" width="26" height="20" fill="#8B3A2B"/>
-          <rect x="250" y="330" width="90" height="16" rx="4" fill="#16233D"/>
-          <rect x="330" y="300" width="16" height="60" rx="4" fill="#16233D"/>
-        </svg>
+        <img class="scene" src="tecnicatura-tile.jpg" alt="" aria-hidden="true">
         <div class="tint"></div>
         <span class="tile-eyebrow">Salida laboral</span>
         <div class="tile-label">
@@ -342,7 +345,47 @@
   <span class="wa-label">Solicitar información por WhatsApp</span>
 </a>
 
+<script>
+(function(){
+  var track = document.getElementById('heroCarousel');
+  if(!track) return;
+  var slides = track.querySelectorAll('.hero-slide');
+  var dots = track.querySelectorAll('.hero-dot');
+  var prevBtn = document.getElementById('heroPrev');
+  var nextBtn = document.getElementById('heroNext');
+  var current = 0;
+  var timer;
+
+  function goTo(i){
+    slides[current].classList.remove('is-active');
+    dots[current].classList.remove('is-active');
+    current = (i + slides.length) % slides.length;
+    slides[current].classList.add('is-active');
+    dots[current].classList.add('is-active');
+  }
+
+  function next(){ goTo(current + 1); }
+  function prev(){ goTo(current - 1); }
+
+  function startAuto(){ timer = setInterval(next, 6500); }
+  function stopAuto(){ clearInterval(timer); }
+
+  nextBtn.addEventListener('click', function(){ next(); stopAuto(); startAuto(); });
+  prevBtn.addEventListener('click', function(){ prev(); stopAuto(); startAuto(); });
+  dots.forEach(function(dot){
+    dot.addEventListener('click', function(){
+      goTo(parseInt(dot.dataset.slide, 10));
+      stopAuto(); startAuto();
+    });
+  });
+
+  track.addEventListener('mouseenter', stopAuto);
+  track.addEventListener('mouseleave', startAuto);
+
+  startAuto();
+})();
+</script>
+
 </body>
 </html>
-
 
