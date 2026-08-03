@@ -69,7 +69,8 @@
     color:#F6F2E9;
   }
   .brand-mark{
-    width:38px;height:38px;flex:none;
+    width:42px;height:42px;flex:none;
+    object-fit:contain;
   }
   .brand-name{
     font-family:'Fraunces', serif;
