@@ -161,6 +161,12 @@
   .hero-pill::before{
     content:""; width:7px; height:7px; border-radius:50%; background:#8BC48A; flex:none;
   }
+  .hero-overline{
+    display:block;
+    font-size:12.5px; font-weight:700; letter-spacing:0.16em; text-transform:uppercase;
+    color:#D9B577;
+    margin-top:16px;
+  }
   .hero-badges{
     display:flex; gap:10px; justify-content:center; flex-wrap:wrap;
     margin-top:20px;
@@ -225,6 +231,17 @@
   .hero-actions-bar .hero-actions{
     display:flex; gap:16px; flex-wrap:wrap; justify-content:center;
   }
+  .hero-actions-triple{max-width:900px; margin:0 auto;}
+  .btn-inscribite{
+    background:#25D366; color:#0B3D22;
+  }
+  .btn-inscribite:hover{background:#2FE178; transform:translateY(-1px);}
+  .hero-doubt{
+    text-align:center;
+    max-width:560px; margin:18px auto 0;
+    font-size:13.5px; color:#B9C0CF;
+  }
+  .hero-doubt strong{color:#F1D6A6; display:block; font-size:14.5px; margin-bottom:2px;}
   @media (max-width:880px){
     .hero-carousel{height:520px;}
     .hero-slide-copy{bottom:76px;}
@@ -319,6 +336,26 @@
     text-align:center; max-width:640px; margin:0 auto 56px;
   }
   .pillars-head h2{font-size:clamp(1.5rem,2.8vw,2rem); margin-top:14px;}
+
+  /* ---------- Why choose us ---------- */
+  .why-us{background:var(--paper);}
+  .why-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:28px 36px;
+  }
+  .why-item{
+    display:flex; gap:14px; align-items:flex-start;
+  }
+  .why-check{
+    flex:none; width:28px; height:28px; border-radius:50%;
+    background:var(--sage); color:#fff;
+    display:flex; align-items:center; justify-content:center;
+    font-size:14px; margin-top:2px;
+  }
+  .why-item h3{font-size:16.5px; font-weight:600;}
+  .why-item p{font-size:14px; color:var(--ink-soft); margin-top:5px;}
+  @media (max-width:880px){
+    .why-grid{grid-template-columns:1fr; gap:22px;}
+  }
   .colonnade{
     display:grid; grid-template-columns:repeat(3, 1fr); gap:36px; align-items:end;
   }
@@ -709,4 +746,36 @@
     }
     .whatsapp-float svg{width:26px; height:26px;}
     .whatsapp-float .wa-label{display:none;}
+  }
+
+  /* ---------- Floating Inscribite ahora button ---------- */
+  .inscribite-float{
+    position:fixed;
+    right:24px; bottom:90px;
+    z-index:150;
+    display:inline-flex; align-items:center; gap:10px;
+    background:var(--bronze);
+    color:var(--ink);
+    font-family:'Public Sans',sans-serif;
+    font-weight:700;
+    font-size:14.5px;
+    padding:15px 22px;
+    border-radius:50px;
+    box-shadow:0 14px 34px rgba(0,0,0,0.28);
+    transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+  }
+  .inscribite-float:hover{
+    background:#CC9743;
+    transform:translateY(-2px);
+    box-shadow:0 18px 40px rgba(0,0,0,0.32);
+  }
+  .inscribite-float svg{width:20px; height:20px; flex:none;}
+  @media (max-width:600px){
+    .inscribite-float{
+      right:14px; bottom:78px;
+      padding:13px 16px;
+      font-size:0;
+    }
+    .inscribite-float svg{width:22px; height:22px;}
+    .inscribite-float .ins-label{display:none;}
   }
