@@ -1,492 +1,1514 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Instituto San Ambrosio — Formación integral desde 1998</title>
-<meta name="description" content="Instituto San Ambrosio: educación secundaria, profesorados y tecnicaturas basados en el pensamiento efectivo, las inteligencias múltiples y la enseñanza para la comprensión.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Instituto San Ambrosio — Formación integral desde 1998</title>
+
+  <meta
+    name="description"
+    content="Instituto San Ambrosio: educación secundaria, profesorados y tecnicaturas basados en el pensamiento efectivo, las inteligencias múltiples y la enseñanza para la comprensión."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-<a href="#contenido" class="skip-link">Saltar al contenido</a>
 
-<header>
-  <div class="nav-row">
-    <a href="#top" class="brand" aria-label="Instituto San Ambrosio - inicio">
-      <img class="brand-mark" src="logo.png" alt="Escudo Instituto San Ambrosio">
-      <span class="brand-name">Instituto San Ambrosio<small>DESDE 1998 · CABA</small></span>
-    </a>
-    <nav class="primary" aria-label="Navegación principal">
-      <a href="#pilares">Nuestra propuesta</a>
-      <a href="#porque-elegirnos">¿Por qué elegirnos?</a>
-      <div class="nav-item">
-        <a href="#niveles">Carreras y formaciones <span class="chev" aria-hidden="true"></span></a>
-        <div class="nav-dropdown">
-          <a href="psicologia-social.html">Psicología Social <span class="arr">&rarr;</span></a>
-          <a href="profesorado.html">Profesorado de Educación Inicial <span class="arr">&rarr;</span></a>
-          <a href="tramo-pedagogico.html">Tramo Pedagógico <span class="arr">&rarr;</span></a>
-          <a href="secundaria.html">Secundario <span class="arr">&rarr;</span></a>
-        </div>
-      </div>
-      <a href="#contacto">Contacto</a>
-      <a href="#contacto" class="nav-cta">Inscripción</a>
-    </nav>
-  </div>
-</header>
+  <a href="#contenido" class="skip-link">
+    Saltar al contenido
+  </a>
 
-<main id="contenido">
+  <!-- HEADER -->
+  <header>
+    <div class="nav-row">
 
-  <!-- HERO -->
-  <section class="hero" id="top">
-    <div class="hero-carousel" id="heroCarousel">
-      <div class="hero-slide is-active">
-        <img src="fachada-hero.jpg" alt="" loading="eager">
-        <div class="hero-scrim"></div>
-        <div class="hero-slide-copy">
-          <span class="hero-pill">Inscripciones abiertas – Ingreso 2026</span>
-          <span class="hero-overline">Instituto San Ambrosio</span>
-          <h1>Formación profesional para transformar tu futuro.</h1>
-          <p class="lede">Carreras terciarias · Profesorados · Formación Pedagógica · Secundario.</p>
-          <div class="hero-badges">
-            <span class="hero-badge">Título oficial</span>
-            <span class="hero-badge">Carreras oficiales</span>
-          </div>
-        </div>
-      </div>
-      <div class="hero-slide">
-        <img src="secundaria-hero.jpg" alt="" loading="lazy">
-        <div class="hero-scrim"></div>
-        <div class="hero-slide-copy">
-          <p class="hero-slide-title">Educación de Calidad</p>
-          <p class="lede">La importancia de aprender enseñando.</p>
-        </div>
-      </div>
-      <div class="hero-slide">
-        <img src="profesorado-hero.jpg" alt="" loading="lazy">
-        <div class="hero-scrim"></div>
-        <div class="hero-slide-copy">
-          <p class="hero-slide-title">Formación Docente</p>
-          <p class="lede">Formamos educadores para transformar realidades.</p>
-        </div>
-      </div>
-      <div class="hero-slide">
-        <img src="tecnicatura-hero.jpg" alt="" loading="lazy">
-        <div class="hero-scrim"></div>
-        <div class="hero-slide-copy">
-          <p class="hero-slide-title">Formación Técnica</p>
-          <p class="lede">Práctica desde el primer año, con salida laboral rápida.</p>
-        </div>
-      </div>
+      <a href="#top" class="brand" aria-label="Instituto San Ambrosio - inicio">
 
-      <button class="hero-arrow hero-arrow-prev" id="heroPrev" aria-label="Foto anterior">
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <button class="hero-arrow hero-arrow-next" id="heroNext" aria-label="Foto siguiente">
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
+        <img
+          class="brand-mark"
+          src="logo.png"
+          alt="Escudo Instituto San Ambrosio"
+        >
 
-      <div class="hero-dots" id="heroDots">
-        <button class="hero-dot is-active" data-slide="0" aria-label="Ir a la diapositiva 1"></button>
-        <button class="hero-dot" data-slide="1" aria-label="Ir a la diapositiva 2"></button>
-        <button class="hero-dot" data-slide="2" aria-label="Ir a la diapositiva 3"></button>
-        <button class="hero-dot" data-slide="3" aria-label="Ir a la diapositiva 4"></button>
-      </div>
-    </div>
+        <span class="brand-name">
+          Instituto San Ambrosio
+          <small>DESDE 1998 · CABA</small>
+        </span>
 
-    <div class="hero-actions-bar">
-      <div class="wrap hero-actions hero-actions-triple">
-        <a href="#niveles" class="btn btn-solid">Conocé las carreras</a>
-        <a href="https://forms.gle/btFGAQn3usRTrAHB6" target="_blank" rel="noopener" class="btn btn-inscribite">Quiero inscribirme</a>
-        <a href="https://wa.me/5491148990577?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20Instituto%20San%20Ambrosio" target="_blank" rel="noopener" class="btn btn-ghost">Hablar por WhatsApp</a>
-      </div>
-      <p class="hero-doubt">
-        <strong>¿Todavía tenés dudas?</strong>
-        Hablanos por WhatsApp y recibí información sobre requisitos, modalidad, aranceles y fechas de inicio.
-      </p>
-    </div>
-  </section>
-
-  <!-- MISSION -->
-  <section class="mission">
-    <div class="wrap">
-      <span class="eyebrow">Nuestro propósito</span>
-      <h2>Formar personas <span class="accent">autónomas, reflexivas</span> y comprometidas con su propio aprendizaje.</h2>
-      <div class="mission-rule"></div>
-    </div>
-  </section>
-
-  <!-- WHY CHOOSE US -->
-  <section class="why-us" id="porque-elegirnos">
-    <div class="wrap">
-      <div class="pillars-head">
-        <span class="eyebrow">Nuestra propuesta</span>
-        <h2>¿Por qué elegir San Ambrosio?</h2>
-      </div>
-      <div class="why-grid">
-        <div class="why-item">
-          <span class="why-check" aria-hidden="true">✔</span>
-          <div>
-            <h3>Títulos oficiales</h3>
-            <p>Formaciones con reconocimiento correspondiente.</p>
-          </div>
-        </div>
-        <div class="why-item">
-          <span class="why-check" aria-hidden="true">✔</span>
-          <div>
-            <h3>Acompañamiento personalizado</h3>
-            <p>No sos un número. Te acompañamos durante tu recorrido académico.</p>
-          </div>
-        </div>
-        <div class="why-item">
-          <span class="why-check" aria-hidden="true">✔</span>
-          <div>
-            <h3>Formación práctica</h3>
-            <p>Aprendé herramientas que puedas aplicar en tu profesión.</p>
-          </div>
-        </div>
-        <div class="why-item">
-          <span class="why-check" aria-hidden="true">✔</span>
-          <div>
-            <h3>Docentes especializados</h3>
-            <p>Profesionales con experiencia académica y laboral.</p>
-          </div>
-        </div>
-        <div class="why-item">
-          <span class="why-check" aria-hidden="true">✔</span>
-          <div>
-            <h3>Modalidades para adultos que trabajan</h3>
-            <p>Organizá tu formación sin dejar de lado tus responsabilidades.</p>
-          </div>
-        </div>
-        <div class="why-item">
-          <span class="why-check" aria-hidden="true">✔</span>
-          <div>
-            <h3>Comunidad educativa</h3>
-            <p>Un espacio para aprender, crecer y construir tu futuro profesional.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PILLARS / PHILOSOPHY -->
-  <section class="pillars" id="pilares">
-    <div class="wrap">
-      <div class="pillars-head">
-        <span class="eyebrow">Nuestra filosofía institucional</span>
-        <h2>Todo lo que enseñamos se sostiene sobre estas tres columnas.</h2>
-      </div>
-      <div class="colonnade">
-        <div class="colonnade-item">
-          <svg viewBox="0 0 160 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect x="20" y="196" width="120" height="14" fill="#16233D"/>
-            <rect x="60" y="30" width="40" height="166" fill="#B8863B"/>
-            <rect x="30" y="14" width="100" height="16" fill="#16233D"/>
-            <circle cx="80" cy="8" r="6" fill="#16233D"/>
-          </svg>
-          <h3>Pensamiento efectivo</h3>
-          <p>Herramientas concretas para razonar, decidir y resolver problemas reales, dentro y fuera del aula.</p>
-        </div>
-        <div class="colonnade-item">
-          <svg viewBox="0 0 160 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect x="20" y="196" width="120" height="14" fill="#16233D"/>
-            <rect x="60" y="30" width="40" height="166" fill="#8E6423"/>
-            <rect x="30" y="14" width="100" height="16" fill="#16233D"/>
-            <circle cx="80" cy="8" r="6" fill="#16233D"/>
-          </svg>
-          <h3>Inteligencias múltiples</h3>
-          <p>Reconocemos distintas formas de ser inteligente y diseñamos propuestas que las potencian a todas.</p>
-        </div>
-        <div class="colonnade-item">
-          <svg viewBox="0 0 160 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect x="20" y="196" width="120" height="14" fill="#16233D"/>
-            <rect x="60" y="30" width="40" height="166" fill="#B8863B"/>
-            <rect x="30" y="14" width="100" height="16" fill="#16233D"/>
-            <circle cx="80" cy="8" r="6" fill="#16233D"/>
-          </svg>
-          <h3>Enseñanza para la comprensión</h3>
-          <p>Se enseña para comprender, no para repetir: cada contenido se aplica, se explica y se transfiere.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- LEVEL TILES (hover) -->
-  <section id="niveles">
-    <div class="wrap">
-      <div class="programs-head">
-        <div>
-          <span class="eyebrow">Oferta educativa</span>
-          <h2>Elegí tu camino dentro del instituto.</h2>
-        </div>
-        <p>Pasá el mouse sobre cada nivel para conocerlo, y entrá para ver el plan de estudios completo.</p>
-      </div>
-    </div>
-    <div class="level-tiles">
-      <a class="level-tile" data-accent="bronze" href="secundaria.html">
-        <img class="scene" src="secundaria-tile.jpg" alt="" aria-hidden="true">
-        <div class="tint"></div>
-        <span class="tile-eyebrow">Nivel medio</span>
-        <div class="tile-label">
-          <h3>Secundaria</h3>
-          <span class="tile-arrow" aria-hidden="true">→</span>
-        </div>
       </a>
 
-      <a class="level-tile" data-accent="sage" href="profesorado.html">
-        <img class="scene" src="profesorado-tile.jpg" alt="" aria-hidden="true">
-        <div class="tint"></div>
-        <span class="tile-eyebrow">Formación docente</span>
-        <div class="tile-label">
-          <h3>Profesorado</h3>
-          <span class="tile-arrow" aria-hidden="true">→</span>
-        </div>
-      </a>
+      <nav class="primary" aria-label="Navegación principal">
 
-      <a class="level-tile" data-accent="brick" href="tecnicatura.html">
-        <img class="scene" src="tecnicatura-tile.jpg" alt="" aria-hidden="true">
-        <div class="tint"></div>
-        <span class="tile-eyebrow">Salida laboral</span>
-        <div class="tile-label">
-          <h3>Tecnicatura</h3>
-          <span class="tile-arrow" aria-hidden="true">→</span>
-        </div>
-      </a>
-    </div>
-  </section>
-
-  <!-- PROGRAMS -->
-  <section id="mas-propuestas">
-    <div class="wrap">
-      <div class="programs-head">
-        <div>
-          <span class="eyebrow">Más propuestas</span>
-          <h2>Otros dos caminos dentro del instituto.</h2>
-        </div>
-        <p>Pensados para quienes buscan una formación específica en salud mental comunitaria o habilitación docente.</p>
-      </div>
-      <div class="program-grid program-grid-2">
-        <a class="program-card" href="psicologia-social.html">
-          <span class="program-num">01</span>
-          <h3>Psicología Social</h3>
-          <p>Formación con articulación directa hacia la Licenciatura en Psicología, en convenio con UFLO.</p>
-          <span class="go">Ver plan de estudios →</span>
+        <a href="#pilares">
+          Nuestra propuesta
         </a>
-        <a class="program-card" href="tramo-pedagogico.html">
-          <span class="program-num">02</span>
-          <h3>Tramo Pedagógico</h3>
-          <p>Habilitación docente para profesionales que ya ejercen y buscan formalizar su rol en el aula.</p>
-          <span class="go">Ver plan de estudios →</span>
+
+        <a href="#porque-elegirnos">
+          ¿Por qué elegirnos?
         </a>
-      </div>
-    </div>
-  </section>
 
-  <!-- VALUES -->
-  <section class="values section-tight">
+        <div class="nav-item">
+
+          <a href="#niveles">
+            Carreras y formaciones
+            <span class="chev" aria-hidden="true"></span>
+          </a>
+
+          <div class="nav-dropdown">
+
+            <a href="psicologia-social.html">
+              Psicología Social
+              <span class="arr">&rarr;</span>
+            </a>
+
+            <a href="profesorado.html">
+              Profesorado de Educación Inicial
+              <span class="arr">&rarr;</span>
+            </a>
+
+            <a href="tramo-pedagogico.html">
+              Tramo Pedagógico
+              <span class="arr">&rarr;</span>
+            </a>
+
+            <a href="secundaria.html">
+              Secundario
+              <span class="arr">&rarr;</span>
+            </a>
+
+          </div>
+
+        </div>
+
+        <a href="#contacto">
+          Contacto
+        </a>
+
+        <a href="#contacto" class="nav-cta">
+          Inscripción
+        </a>
+
+      </nav>
+    </div>
+  </header>
+
+
+  <main id="contenido">
+
+    <!-- HERO -->
+    <section class="hero" id="top">
+
+      <div class="hero-carousel" id="heroCarousel">
+
+        <div class="hero-slide is-active">
+
+          <img
+            src="fachada-hero.jpg"
+            alt=""
+            loading="eager"
+          >
+
+          <div class="hero-scrim"></div>
+
+          <div class="hero-slide-copy">
+
+            <span class="hero-pill">
+              Inscripciones abiertas – Ingreso 2026
+            </span>
+
+            <span class="hero-overline">
+              Instituto San Ambrosio
+            </span>
+
+            <h1>
+              Formación profesional para transformar tu futuro.
+            </h1>
+
+            <p class="lede">
+              Carreras terciarias · Profesorados · Formación Pedagógica · Secundario.
+            </p>
+
+            <div class="hero-badges">
+
+              <span class="hero-badge">
+                Título oficial
+              </span>
+
+              <span class="hero-badge">
+                Carreras oficiales
+              </span>
+
+            </div>
+
+          </div>
+        </div>
+
+
+        <div class="hero-slide">
+
+          <img
+            src="secundaria-hero.jpg"
+            alt=""
+            loading="lazy"
+          >
+
+          <div class="hero-scrim"></div>
+
+          <div class="hero-slide-copy">
+
+            <p class="hero-slide-title">
+              Educación de Calidad
+            </p>
+
+            <p class="lede">
+              La importancia de aprender enseñando.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="hero-slide">
+
+          <img
+            src="profesorado-hero.jpg"
+            alt=""
+            loading="lazy"
+          >
+
+          <div class="hero-scrim"></div>
+
+          <div class="hero-slide-copy">
+
+            <p class="hero-slide-title">
+              Formación Docente
+            </p>
+
+            <p class="lede">
+              Formamos educadores para transformar realidades.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="hero-slide">
+
+          <img
+            src="tecnicatura-hero.jpg"
+            alt=""
+            loading="lazy"
+          >
+
+          <div class="hero-scrim"></div>
+
+          <div class="hero-slide-copy">
+
+            <p class="hero-slide-title">
+              Formación Técnica
+            </p>
+
+            <p class="lede">
+              Práctica desde el primer año, con salida laboral rápida.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <button
+          class="hero-arrow hero-arrow-prev"
+          id="heroPrev"
+          aria-label="Foto anterior"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15 6l-6 6 6 6"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+
+
+        <button
+          class="hero-arrow hero-arrow-next"
+          id="heroNext"
+          aria-label="Foto siguiente"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9 6l6 6-6 6"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+
+
+        <div class="hero-dots" id="heroDots">
+
+          <button
+            class="hero-dot is-active"
+            data-slide="0"
+            aria-label="Ir a la diapositiva 1"
+          ></button>
+
+          <button
+            class="hero-dot"
+            data-slide="1"
+            aria-label="Ir a la diapositiva 2"
+          ></button>
+
+          <button
+            class="hero-dot"
+            data-slide="2"
+            aria-label="Ir a la diapositiva 3"
+          ></button>
+
+          <button
+            class="hero-dot"
+            data-slide="3"
+            aria-label="Ir a la diapositiva 4"
+          ></button>
+
+        </div>
+
+      </div>
+
+
+      <div class="hero-actions-bar">
+
+        <div class="wrap hero-actions hero-actions-triple">
+
+          <a href="#niveles" class="btn btn-solid">
+            Conocé las carreras
+          </a>
+
+          <a
+            href="https://forms.gle/btFGAQn3usRTrAHB6"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-inscribite"
+          >
+            Quiero inscribirme
+          </a>
+
+          <a
+            href="https://wa.me/5491148990577?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20Instituto%20San%20Ambrosio"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-ghost"
+          >
+            Hablar por WhatsApp
+          </a>
+
+        </div>
+
+        <p class="hero-doubt">
+
+          <strong>
+            ¿Todavía tenés dudas?
+          </strong>
+
+          Hablanos por WhatsApp y recibí información sobre requisitos,
+          modalidad, aranceles y fechas de inicio.
+
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- MISSION -->
+    <section class="mission">
+
+      <div class="wrap">
+
+        <span class="eyebrow">
+          Nuestro propósito
+        </span>
+
+        <h2>
+          Formar personas
+          <span class="accent">
+            autónomas, reflexivas
+          </span>
+          y comprometidas con su propio aprendizaje.
+        </h2>
+
+        <div class="mission-rule"></div>
+
+      </div>
+
+    </section>
+
+
+    <!-- WHY CHOOSE US -->
+    <section class="why-us" id="porque-elegirnos">
+
+      <div class="wrap">
+
+        <div class="pillars-head">
+
+          <span class="eyebrow">
+            Nuestra propuesta
+          </span>
+
+          <h2>
+            ¿Por qué elegir San Ambrosio?
+          </h2>
+
+        </div>
+
+
+        <div class="why-grid">
+
+          <div class="why-item">
+
+            <span class="why-check" aria-hidden="true">
+              ✔
+            </span>
+
+            <div>
+
+              <h3>
+                Títulos oficiales
+              </h3>
+
+              <p>
+                Formaciones con reconocimiento correspondiente.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="why-item">
+
+            <span class="why-check" aria-hidden="true">
+              ✔
+            </span>
+
+            <div>
+
+              <h3>
+                Acompañamiento personalizado
+              </h3>
+
+              <p>
+                No sos un número. Te acompañamos durante tu recorrido académico.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="why-item">
+
+            <span class="why-check" aria-hidden="true">
+              ✔
+            </span>
+
+            <div>
+
+              <h3>
+                Formación práctica
+              </h3>
+
+              <p>
+                Aprendé herramientas que puedas aplicar en tu profesión.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="why-item">
+
+            <span class="why-check" aria-hidden="true">
+              ✔
+            </span>
+
+            <div>
+
+              <h3>
+                Docentes especializados
+              </h3>
+
+              <p>
+                Profesionales con experiencia académica y laboral.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="why-item">
+
+            <span class="why-check" aria-hidden="true">
+              ✔
+            </span>
+
+            <div>
+
+              <h3>
+                Modalidades para adultos que trabajan
+              </h3>
+
+              <p>
+                Organizá tu formación sin dejar de lado tus responsabilidades.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="why-item">
+
+            <span class="why-check" aria-hidden="true">
+              ✔
+            </span>
+
+            <div>
+
+              <h3>
+                Comunidad educativa
+              </h3>
+
+              <p>
+                Un espacio para aprender, crecer y construir tu futuro profesional.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PILLARS -->
+    <section class="pillars" id="pilares">
+
+      <div class="wrap">
+
+        <div class="pillars-head">
+
+          <span class="eyebrow">
+            Nuestra filosofía institucional
+          </span>
+
+          <h2>
+            Todo lo que enseñamos se sostiene sobre estas tres columnas.
+          </h2>
+
+        </div>
+
+
+        <div class="colonnade">
+
+          <div class="colonnade-item">
+
+            <svg viewBox="0 0 160 220"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
+
+              <rect
+                x="20"
+                y="196"
+                width="120"
+                height="14"
+                fill="#16233D"
+              />
+
+              <rect
+                x="60"
+                y="30"
+                width="40"
+                height="166"
+                fill="#B8863B"
+              />
+
+              <rect
+                x="30"
+                y="14"
+                width="100"
+                height="16"
+                fill="#16233D"
+              />
+
+              <circle
+                cx="80"
+                cy="8"
+                r="6"
+                fill="#16233D"
+              />
+
+            </svg>
+
+            <h3>
+              Pensamiento efectivo
+            </h3>
+
+            <p>
+              Herramientas concretas para razonar, decidir y resolver problemas reales,
+              dentro y fuera del aula.
+            </p>
+
+          </div>
+
+
+          <div class="colonnade-item">
+
+            <svg viewBox="0 0 160 220"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
+
+              <rect
+                x="20"
+                y="196"
+                width="120"
+                height="14"
+                fill="#16233D"
+              />
+
+              <rect
+                x="60"
+                y="30"
+                width="40"
+                height="166"
+                fill="#8E6423"
+              />
+
+              <rect
+                x="30"
+                y="14"
+                width="100"
+                height="16"
+                fill="#16233D"
+              />
+
+              <circle
+                cx="80"
+                cy="8"
+                r="6"
+                fill="#16233D"
+              />
+
+            </svg>
+
+            <h3>
+              Inteligencias múltiples
+            </h3>
+
+            <p>
+              Reconocemos distintas formas de ser inteligente y diseñamos propuestas
+              que las potencian a todas.
+            </p>
+
+          </div>
+
+
+          <div class="colonnade-item">
+
+            <svg viewBox="0 0 160 220"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
+
+              <rect
+                x="20"
+                y="196"
+                width="120"
+                height="14"
+                fill="#16233D"
+              />
+
+              <rect
+                x="60"
+                y="30"
+                width="40"
+                height="166"
+                fill="#B8863B"
+              />
+
+              <rect
+                x="30"
+                y="14"
+                width="100"
+                height="16"
+                fill="#16233D"
+              />
+
+              <circle
+                cx="80"
+                cy="8"
+                r="6"
+                fill="#16233D"
+              />
+
+            </svg>
+
+            <h3>
+              Enseñanza para la comprensión
+            </h3>
+
+            <p>
+              Se enseña para comprender, no para repetir: cada contenido se aplica,
+              se explica y se transfiere.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- LEVELS -->
+    <section id="niveles">
+
+      <div class="wrap">
+
+        <div class="programs-head">
+
+          <div>
+
+            <span class="eyebrow">
+              Oferta educativa
+            </span>
+
+            <h2>
+              Elegí tu camino dentro del instituto.
+            </h2>
+
+          </div>
+
+          <p>
+            Pasá el mouse sobre cada nivel para conocerlo,
+            y entrá para ver el plan de estudios completo.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="level-tiles">
+
+        <a
+          class="level-tile"
+          data-accent="bronze"
+          href="secundaria.html"
+        >
+
+          <img
+            class="scene"
+            src="secundaria-tile.jpg"
+            alt=""
+            aria-hidden="true"
+          >
+
+          <div class="tint"></div>
+
+          <span class="tile-eyebrow">
+            Nivel medio
+          </span>
+
+          <div class="tile-label">
+
+            <h3>
+              Secundaria
+            </h3>
+
+            <span class="tile-arrow" aria-hidden="true">
+              →
+            </span>
+
+          </div>
+
+        </a>
+
+
+        <a
+          class="level-tile"
+          data-accent="sage"
+          href="profesorado.html"
+        >
+
+          <img
+            class="scene"
+            src="profesorado-tile.jpg"
+            alt=""
+            aria-hidden="true"
+          >
+
+          <div class="tint"></div>
+
+          <span class="tile-eyebrow">
+            Formación docente
+          </span>
+
+          <div class="tile-label">
+
+            <h3>
+              Profesorado
+            </h3>
+
+            <span class="tile-arrow" aria-hidden="true">
+              →
+            </span>
+
+          </div>
+
+        </a>
+
+
+        <a
+          class="level-tile"
+          data-accent="brick"
+          href="tecnicatura.html"
+        >
+
+          <img
+            class="scene"
+            src="tecnicatura-tile.jpg"
+            alt=""
+            aria-hidden="true"
+          >
+
+          <div class="tint"></div>
+
+          <span class="tile-eyebrow">
+            Salida laboral
+          </span>
+
+          <div class="tile-label">
+
+            <h3>
+              Tecnicatura
+            </h3>
+
+            <span class="tile-arrow" aria-hidden="true">
+              →
+            </span>
+
+          </div>
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- PROGRAMS -->
+    <section id="mas-propuestas">
+
+      <div class="wrap">
+
+        <div class="programs-head">
+
+          <div>
+
+            <span class="eyebrow">
+              Más propuestas
+            </span>
+
+            <h2>
+              Otros dos caminos dentro del instituto.
+            </h2>
+
+          </div>
+
+          <p>
+            Pensados para quienes buscan una formación específica en salud mental
+            comunitaria o habilitación docente.
+          </p>
+
+        </div>
+
+
+        <div class="program-grid program-grid-2">
+
+          <a
+            class="program-card"
+            href="psicologia-social.html"
+          >
+
+            <span class="program-num">
+              01
+            </span>
+
+            <h3>
+              Psicología Social
+            </h3>
+
+            <p>
+              Formación con articulación directa hacia la Licenciatura
+              en Psicología, en convenio con UFLO.
+            </p>
+
+            <span class="go">
+              Ver plan de estudios →
+            </span>
+
+          </a>
+
+
+          <a
+            class="program-card"
+            href="tramo-pedagogico.html"
+          >
+
+            <span class="program-num">
+              02
+            </span>
+
+            <h3>
+              Tramo Pedagógico
+            </h3>
+
+            <p>
+              Habilitación docente para profesionales que ya ejercen
+              y buscan formalizar su rol en el aula.
+            </p>
+
+            <span class="go">
+              Ver plan de estudios →
+            </span>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- VALUES -->
+    <section class="values section-tight">
+
+      <div class="wrap">
+
+        <div class="value-item">
+
+          <span class="eyebrow on-sage">
+            Valor 01
+          </span>
+
+          <h3>
+            Empatía
+          </h3>
+
+          <p>
+            Escuchamos antes de enseñar. Cada estudiante llega con una
+            historia que el aula respeta.
+          </p>
+
+        </div>
+
+
+        <div class="value-item">
+
+          <span class="eyebrow on-sage">
+            Valor 02
+          </span>
+
+          <h3>
+            Colaboración
+          </h3>
+
+          <p>
+            Se aprende mejor en conjunto: el trabajo en equipo es parte
+            del contenido, no un extra.
+          </p>
+
+        </div>
+
+
+        <div class="value-item">
+
+          <span class="eyebrow on-sage">
+            Valor 03
+          </span>
+
+          <h3>
+            Respeto
+          </h3>
+
+          <p>
+            Las diferencias se entienden como punto de partida,
+            no como obstáculo para convivir.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SPORT -->
+    <section id="deporte">
+
+      <div class="wrap sport">
+
+        <div class="sport-copy">
+
+          <span class="eyebrow">
+            Más que un recreo
+          </span>
+
+          <h2>
+            El deporte también es prioridad institucional.
+          </h2>
+
+          <p>
+            Promovemos distintas disciplinas para fortalecer el trabajo en equipo,
+            la perseverancia y la superación personal. A los alumnos federados
+            los acompañamos con horarios flexibles y seguimiento pedagógico,
+            para que competir y estudiar nunca sean cosas opuestas.
+          </p>
+
+          <div class="hero-actions">
+
+            <a
+              href="#contacto"
+              class="btn btn-solid"
+              style="background:var(--sage);color:#fff;"
+            >
+              Conocer el programa deportivo
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="sport-art" aria-hidden="true">
+
+          <svg
+            viewBox="0 0 480 372"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+
+            <rect
+              width="480"
+              height="372"
+              fill="#16233D"
+            />
+
+            <circle
+              cx="380"
+              cy="60"
+              r="120"
+              fill="#55684F"
+              opacity="0.5"
+            />
+
+            <rect
+              x="0"
+              y="300"
+              width="480"
+              height="72"
+              fill="#0F1830"
+            />
+
+            <line
+              x1="0"
+              y1="300"
+              x2="480"
+              y2="300"
+              stroke="#F6F2E9"
+              stroke-width="2"
+              opacity="0.6"
+            />
+
+            <circle
+              cx="240"
+              cy="300"
+              r="46"
+              stroke="#F6F2E9"
+              stroke-width="2"
+              fill="none"
+              opacity="0.6"
+            />
+
+            <line
+              x1="240"
+              y1="0"
+              x2="240"
+              y2="372"
+              stroke="#F6F2E9"
+              stroke-width="1.5"
+              opacity="0.35"
+            />
+
+            <rect
+              x="60"
+              y="150"
+              width="10"
+              height="150"
+              fill="#B8863B"
+            />
+
+            <rect
+              x="410"
+              y="180"
+              width="10"
+              height="120"
+              fill="#B8863B"
+            />
+
+          </svg>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- EQUIPO DIRECTIVO -->
+    <section class="section-tight" id="staff">
+
+      <div class="wrap">
+
+        <div class="team-directivo-preview">
+
+          <span class="eyebrow">
+            Institucional
+          </span>
+
+          <h2>
+            NUESTRO EQUIPO DIRECTIVO
+          </h2>
+
+          <p>
+            Conocé a las personas que forman parte del equipo directivo
+            del Instituto San Ambrosio.
+          </p>
+
+          <a
+            href="equipo-directivo.html"
+            class="btn btn-solid"
+          >
+            Ver equipo directivo →
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- LOCATION / CONTACT -->
+    <section class="location" id="contacto">
+
+      <div class="location-grid">
+
+        <div class="location-copy wrap">
+
+          <span class="eyebrow on-dark">
+            Visitanos
+          </span>
+
+          <h2>
+            ¿Dónde encontrarnos?
+          </h2>
+
+          <p>
+            Coordiná una visita guiada por el instituto o escribinos
+            por cualquiera de estos medios; el equipo de admisiones
+            responde todos los días hábiles.
+          </p>
+
+          <div class="contact-list">
+
+            <div>
+
+              <span class="label">
+                Teléfono
+              </span>
+
+              (54-11) 6608-2454
+
+            </div>
+
+
+            <div>
+
+              <span class="label">
+                Email
+              </span>
+
+              inscripcion.sanambrosio@gmail.com
+
+            </div>
+
+
+            <div>
+
+              <span class="label">
+                Instagram
+              </span>
+
+              @instituto.sanambrosio
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <iframe
+          class="map-frame"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.93222793666!2d-58.42666192444194!3d-34.580581356276454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb584b98b606f%3A0xb34013de3fb4e925!2sInstituto%20San%20Ambrosio!5e0!3m2!1ses!2sar!4v1725484526408!5m2!1ses!2sar"
+          title="Ubicación de Instituto San Ambrosio en el mapa"
+        ></iframe>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
     <div class="wrap">
-      <div class="value-item">
-        <span class="eyebrow on-sage">Valor 01</span>
-        <h3>Empatía</h3>
-        <p>Escuchamos antes de enseñar. Cada estudiante llega con una historia que el aula respeta.</p>
-      </div>
-      <div class="value-item">
-        <span class="eyebrow on-sage">Valor 02</span>
-        <h3>Colaboración</h3>
-        <p>Se aprende mejor en conjunto: el trabajo en equipo es parte del contenido, no un extra.</p>
-      </div>
-      <div class="value-item">
-        <span class="eyebrow on-sage">Valor 03</span>
-        <h3>Respeto</h3>
-        <p>Las diferencias se entienden como punto de partida, no como obstáculo para convivir.</p>
-      </div>
-    </div>
-  </section>
 
-  <!-- SPORT -->
-  <section id="deporte">
-    <div class="wrap sport">
-      <div class="sport-copy">
-        <span class="eyebrow">Más que un recreo</span>
-        <h2>El deporte también es prioridad institucional.</h2>
-        <p>Promovemos distintas disciplinas para fortalecer el trabajo en equipo, la perseverancia y la superación personal. A los alumnos federados los acompañamos con horarios flexibles y seguimiento pedagógico, para que competir y estudiar nunca sean cosas opuestas.</p>
-        <div class="hero-actions">
-          <a href="#contacto" class="btn btn-solid" style="background:var(--sage);color:#fff;">Conocer el programa deportivo</a>
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+
+          <span class="brand-name">
+            Instituto San Ambrosio
+          </span>
+
+          <p>
+            Formación integral desde la secundaria hasta la formación docente,
+            con base en tres pilares educativos.
+          </p>
+
         </div>
-      </div>
-      <div class="sport-art" aria-hidden="true">
-        <svg viewBox="0 0 480 372" xmlns="http://www.w3.org/2000/svg">
-          <rect width="480" height="372" fill="#16233D"/>
-          <circle cx="380" cy="60" r="120" fill="#55684F" opacity="0.5"/>
-          <rect x="0" y="300" width="480" height="72" fill="#0F1830"/>
-          <line x1="0" y1="300" x2="480" y2="300" stroke="#F6F2E9" stroke-width="2" opacity="0.6"/>
-          <circle cx="240" cy="300" r="46" stroke="#F6F2E9" stroke-width="2" fill="none" opacity="0.6"/>
-          <line x1="240" y1="0" x2="240" y2="372" stroke="#F6F2E9" stroke-width="1.5" opacity="0.35"/>
-          <rect x="60" y="150" width="10" height="150" fill="#B8863B"/>
-          <rect x="410" y="180" width="10" height="120" fill="#B8863B"/>
-        </svg>
-      </div>
-    </div>
-  </section>
 
-  <!-- STAFF -->
-  <section class="section-tight" id="staff">
-    <div class="wrap">
-      <div class="team-head">
-        <span class="eyebrow">Quiénes te acompañan</span>
-        <h2>Nuestro equipo directivo</h2>
-      </div>
-      <div class="team-grid">
-        <div class="team-card">
-          <div class="team-photo">
-            <span class="initials">GR</span>
-            <img src="equipo/gabriela-maria-romero.jpg" alt="Foto de Gabriela María Romero" loading="lazy" onerror="this.onerror=null;this.remove();">
-          </div>
-          <div class="team-body"><h4>Gabriela María Romero</h4><p class="role">Rectora</p><a class="more" href="#">Saber más →</a></div>
+
+        <div>
+
+          <h4>
+            Institucional
+          </h4>
+
+          <ul>
+
+            <li>
+              <a href="equipo-directivo.html">
+                Equipo directivo
+              </a>
+            </li>
+
+            <li>
+              <a href="#contacto">
+                Contacto
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                Admisiones
+              </a>
+            </li>
+
+          </ul>
+
         </div>
-        <div class="team-card">
-          <div class="team-photo">
-            <span class="initials">VZ</span>
-            <img src="equipo/maria-victoria-zupan.jpg" alt="Foto de María Victoria Zupan" loading="lazy" onerror="this.onerror=null;this.remove();">
-          </div>
-          <div class="team-body"><h4>María Victoria Zupan</h4><p class="role">Secretaria</p><a class="more" href="#">Saber más →</a></div>
+
+
+        <div>
+
+          <h4>
+            Carreras y formaciones
+          </h4>
+
+          <ul>
+
+            <li>
+              <a href="secundaria.html">
+                Secundario
+              </a>
+            </li>
+
+            <li>
+              <a href="profesorado.html">
+                Profesorado de Educación Inicial
+              </a>
+            </li>
+
+            <li>
+              <a href="psicologia-social.html">
+                Psicología Social
+              </a>
+            </li>
+
+            <li>
+              <a href="tramo-pedagogico.html">
+                Tramo Pedagógico
+              </a>
+            </li>
+
+            <li>
+              <a href="tecnicatura.html">
+                Tecnicatura
+              </a>
+            </li>
+
+          </ul>
+
         </div>
-        <div class="team-card">
-          <div class="team-photo">
-            <span class="initials">JS</span>
-            <img src="equipo/maria-jose-sgalia.jpg" alt="Foto de María José Sgalia" loading="lazy" onerror="this.onerror=null;this.remove();">
-          </div>
-          <div class="team-body"><h4>María José Sgalia</h4><p class="role">Coordinadora de carrera</p><a class="more" href="#">Saber más →</a></div>
+
+
+        <div>
+
+          <h4>
+            Seguinos
+          </h4>
+
+          <ul>
+
+            <li>
+              <a
+                href="https://www.instagram.com/instituto.sanambrosio/"
+                target="_blank"
+                rel="noopener"
+              >
+                Instagram
+              </a>
+            </li>
+
+            <li>
+              <a href="mailto:inscripcion.sanambrosio@gmail.com">
+                Email
+              </a>
+            </li>
+
+          </ul>
+
         </div>
-        <div class="team-card">
-          <div class="team-photo">
-            <span class="initials">AS</span>
-            <img src="equipo/adriene-seghpoian.jpg" alt="Foto de Adriene Seghpoian" loading="lazy" onerror="this.onerror=null;this.remove();">
-          </div>
-          <div class="team-body"><h4>Adriene Seghpoian</h4><p class="role">Coordinadora y docente</p><a class="more" href="#">Saber más →</a></div>
-        </div>
+
       </div>
-      <p class="team-note">¿Falta alguien del equipo directivo? Pasame los nombres y cargos y los agrego acá.</p>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          © 2026 Instituto San Ambrosio · Todos los derechos reservados.
+        </span>
+
+        <a href="#top">
+          Volver arriba ↑
+        </a>
+
+      </div>
+
     </div>
-  </section>
 
-  <!-- LOCATION / CONTACT -->
-  <section class="location" id="contacto">
-    <div class="location-grid">
-      <div class="location-copy wrap" style="padding-left:32px;">
-        <span class="eyebrow on-dark">Visitanos</span>
-        <h2>¿Dónde encontrarnos?</h2>
-        <p>Coordiná una visita guiada por el instituto o escribinos por cualquiera de estos medios; el equipo de admisiones responde todos los días hábiles.</p>
-        <div class="contact-list">
-          <div><span class="label">Teléfono</span> (54-11) 6608-2454</div>
-          <div><span class="label">Email</span> inscripcion.sanambrosio@gmail.com</div>
-          <div><span class="label">Instagram</span> @instituto.sanambrosio</div>
-        </div>
-      </div>
-      <iframe class="map-frame" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.93222793666!2d-58.42666192444194!3d-34.580581356276454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb584b98b606f%3A0xb34013de3fb4e925!2sInstituto%20San%20Ambrosio!5e0!3m2!1ses!2sar!4v1725484526408!5m2!1ses!2sar"
-        title="Ubicación de Instituto San Ambrosio en el mapa"></iframe>
-    </div>
-  </section>
+  </footer>
 
-</main>
 
-<footer>
-  <div class="wrap">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <span class="brand-name">Instituto San Ambrosio</span>
-        <p>Formación integral desde la secundaria hasta la formación docente, con base en tres pilares educativos.</p>
-      </div>
-      <div>
-        <h4>Institucional</h4>
-        <ul>
-          <li><a href="#contacto">Contacto</a></li>
-          <li><a href="#">Admisiones</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Carreras y formaciones</h4>
-        <ul>
-          <li><a href="secundaria.html">Secundario</a></li>
-          <li><a href="profesorado.html">Profesorado de Educación Inicial</a></li>
-          <li><a href="psicologia-social.html">Psicología Social</a></li>
-          <li><a href="tramo-pedagogico.html">Tramo Pedagógico</a></li>
-          <li><a href="tecnicatura.html">Tecnicatura</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Seguinos</h4>
-        <ul>
-          <li><a href="https://www.instagram.com/instituto.sanambrosio/" target="_blank" rel="noopener">Instagram</a></li>
-          <li><a href="mailto:inscripcion.sanambrosio@gmail.com">Email</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 Instituto San Ambrosio · Todos los derechos reservados.</span>
-      <a href="#top">Volver arriba ↑</a>
-    </div>
-  </div>
-</footer>
+  <!-- WHATSAPP -->
+  <a
+    class="whatsapp-float"
+    href="https://wa.me/5491148990577?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20Instituto%20San%20Ambrosio"
+    target="_blank"
+    rel="noopener"
+    aria-label="Solicitar información por WhatsApp"
+  >
 
-<a class="whatsapp-float" href="https://wa.me/5491148990577?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20Instituto%20San%20Ambrosio" target="_blank" rel="noopener" aria-label="Solicitar información por WhatsApp">
-  <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.8 14.16c-.24.68-1.4 1.3-1.93 1.37-.5.08-1.11.11-1.79-.11-.41-.13-.94-.3-1.62-.6-2.86-1.24-4.73-4.13-4.87-4.32-.14-.19-1.16-1.55-1.16-2.95 0-1.41.73-2.1 1-2.39.24-.27.53-.34.71-.34h.51c.16 0 .38-.02.59.46.24.55.8 1.9.87 2.04.07.14.12.31.02.5-.09.19-.14.31-.28.47-.14.16-.29.36-.42.48-.14.14-.29.29-.13.57.16.28.71 1.18 1.53 1.91 1.05.94 1.94 1.24 2.22 1.38.28.14.44.12.6-.07.16-.19.68-.79.87-1.07.19-.28.37-.23.62-.14.26.09 1.62.77 1.9.91.28.14.46.21.53.33.07.12.07.68-.17 1.36z"/>
-  </svg>
-  <span class="wa-label">Solicitar información por WhatsApp</span>
-</a>
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.8 14.16c-.24.68-1.4 1.3-1.93 1.37-.5.08-1.11.11-1.79-.11-.41-.13-.94-.3-1.62-.6-2.86-1.24-4.73-4.13-4.87-4.32-.14-.19-1.16-1.55-1.16-2.95 0-1.41.73-2.1 1-2.39.24-.27.53-.34.71-.34h.51c.16 0 .38-.02.59.46.24.55.8 1.9.87 2.04.07.14.12.31.02.5-.09.19-.14.31-.28.47-.14.16-.29.36-.42.48-.14.14-.29.29-.13.57.16.28.71 1.18 1.53 1.91 1.05.94 1.94 1.24 2.22 1.38.28.14.44.12.6-.07.16-.19.68-.79.87-1.07.19-.28.37-.23.62-.14.26.09 1.62.77 1.9.91.28.14.46.21.53.33.07.12.07.68-.17 1.36z"/>
+    </svg>
 
-<a class="inscribite-float" href="https://forms.gle/btFGAQn3usRTrAHB6" target="_blank" rel="noopener" aria-label="Inscribite ahora">
-  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <path d="M12 5v14m-7-7h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
-  </svg>
-  <span class="ins-label">Inscribite ahora</span>
-</a>
+    <span class="wa-label">
+      Solicitar información por WhatsApp
+    </span>
 
-<script>
-(function(){
-  var track = document.getElementById('heroCarousel');
-  if(!track) return;
-  var slides = track.querySelectorAll('.hero-slide');
-  var dots = track.querySelectorAll('.hero-dot');
-  var prevBtn = document.getElementById('heroPrev');
-  var nextBtn = document.getElementById('heroNext');
-  var current = 0;
-  var timer;
+  </a>
 
-  function goTo(i){
-    slides[current].classList.remove('is-active');
-    dots[current].classList.remove('is-active');
-    current = (i + slides.length) % slides.length;
-    slides[current].classList.add('is-active');
-    dots[current].classList.add('is-active');
-  }
 
-  function next(){ goTo(current + 1); }
-  function prev(){ goTo(current - 1); }
+  <!-- INSCRIPCION -->
+  <a
+    class="inscribite-float"
+    href="https://forms.gle/btFGAQn3usRTrAHB6"
+    target="_blank"
+    rel="noopener"
+    aria-label="Inscribite ahora"
+  >
 
-  function startAuto(){ timer = setInterval(next, 6500); }
-  function stopAuto(){ clearInterval(timer); }
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <path
+        d="M12 5v14m-7-7h14"
+        stroke="currentColor"
+        stroke-width="2.4"
+        stroke-linecap="round"
+      />
+    </svg>
 
-  nextBtn.addEventListener('click', function(){ next(); stopAuto(); startAuto(); });
-  prevBtn.addEventListener('click', function(){ prev(); stopAuto(); startAuto(); });
-  dots.forEach(function(dot){
-    dot.addEventListener('click', function(){
-      goTo(parseInt(dot.dataset.slide, 10));
-      stopAuto(); startAuto();
-    });
-  });
+    <span class="ins-label">
+      Inscribite ahora
+    </span>
 
-  track.addEventListener('mouseenter', stopAuto);
-  track.addEventListener('mouseleave', startAuto);
+  </a>
 
-  startAuto();
-})();
-</script>
+
+  <!-- HERO SCRIPT -->
+  <script>
+
+    (function(){
+
+      var track = document.getElementById('heroCarousel');
+
+      if(!track) return;
+
+      var slides = track.querySelectorAll('.hero-slide');
+      var dots = track.querySelectorAll('.hero-dot');
+
+      var prevBtn = document.getElementById('heroPrev');
+      var nextBtn = document.getElementById('heroNext');
+
+      var current = 0;
+      var timer;
+
+
+      function goTo(i){
+
+        slides[current].classList.remove('is-active');
+        dots[current].classList.remove('is-active');
+
+        current = (i + slides.length) % slides.length;
+
+        slides[current].classList.add('is-active');
+        dots[current].classList.add('is-active');
+
+      }
+
+
+      function next(){
+        goTo(current + 1);
+      }
+
+
+      function prev(){
+        goTo(current - 1);
+      }
+
+
+      function startAuto(){
+        timer = setInterval(next, 6500);
+      }
+
+
+      function stopAuto(){
+        clearInterval(timer);
+      }
+
+
+      nextBtn.addEventListener('click', function(){
+
+        next();
+
+        stopAuto();
+        startAuto();
+
+      });
+
+
+      prevBtn.addEventListener('click', function(){
+
+        prev();
+
+        stopAuto();
+        startAuto();
+
+      });
+
+
+      dots.forEach(function(dot){
+
+        dot.addEventListener('click', function(){
+
+          goTo(parseInt(dot.dataset.slide, 10));
+
+          stopAuto();
+          startAuto();
+
+        });
+
+      });
+
+
+      track.addEventListener('mouseenter', stopAuto);
+      track.addEventListener('mouseleave', startAuto);
+
+      startAuto();
+
+    })();
+
+  </script>
 
 </body>
 </html>
