@@ -611,34 +611,93 @@
   .sub-cta .hero-actions{justify-content:center; margin-top:24px;}
 
   /* ---------- Nav dropdown ---------- */
-  .nav-item{position:relative; padding-bottom:18px; margin-bottom:-18px;}
-  .nav-item > a{display:inline-flex; align-items:center; gap:6px;}
-  .nav-item .chev{
-    width:9px; height:9px; border-right:1.5px solid currentColor; border-bottom:1.5px solid currentColor;
-    transform:rotate(45deg); margin-top:-3px; transition:transform .2s ease;
-  }
-  .nav-item:hover .chev, .nav-item:focus-within .chev{transform:rotate(225deg); margin-top:3px;}
-  .nav-dropdown{
-    position:absolute; top:100%; left:50%; transform:translate(-50%,6px);
-    background:#101A2E; border:1px solid rgba(246,242,233,0.14);
-    min-width:240px; padding:10px; border-radius:3px;
-    box-shadow:0 18px 40px rgba(0,0,0,0.35);
-    opacity:0; visibility:hidden; pointer-events:none;
-    transition:opacity .18s ease, transform .18s ease, visibility .18s;
-    z-index:50;
-  }
-  .nav-item:hover .nav-dropdown,
-  .nav-item:focus-within .nav-dropdown{
-    opacity:1; visibility:visible; pointer-events:auto; transform:translate(-50%,10px);
-  }
-  .nav-dropdown a{
-    display:flex; align-items:center; justify-content:space-between; gap:10px;
-    padding:11px 14px; font-size:14px; color:#DCE0E9; border-radius:2px;
-  }
-  .nav-dropdown a::after{display:none;}
-  .nav-dropdown a:hover, .nav-dropdown a:focus-visible{background:rgba(184,134,59,0.14); color:#F1D6A6;}
-  .nav-dropdown a .arr{opacity:0; transform:translateX(-4px); transition:all .18s ease; font-size:13px;}
-  .nav-dropdown a:hover .arr{opacity:1; transform:translateX(0);}
+ /* ---------- Nav dropdown ---------- */
+.nav-item{
+    position:relative;
+    padding-bottom:12px;
+}
+
+.nav-item > a{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+}
+
+.nav-item .chev{
+    width:9px;
+    height:9px;
+    border-right:1.5px solid currentColor;
+    border-bottom:1.5px solid currentColor;
+    transform:rotate(45deg);
+    margin-top:-3px;
+    transition:transform .2s ease;
+}
+
+.nav-item:hover .chev,
+.nav-item:focus-within .chev{
+    transform:rotate(225deg);
+    margin-top:3px;
+}
+
+.nav-dropdown{
+    position:absolute;
+    top:100%;
+    left:0;
+    min-width:340px;
+    background:#101A2E;
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:6px;
+    padding:8px 0;
+    box-shadow:0 18px 40px rgba(0,0,0,.35);
+    z-index:9999;
+
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+    transform:translateY(8px);
+    transition:all .25s ease;
+}
+
+.nav-item:hover .nav-dropdown,
+.nav-item:focus-within .nav-dropdown{
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+    transform:translateY(0);
+}
+
+.nav-dropdown a{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+    padding:12px 18px;
+    color:#fff;
+    font-size:14px;
+    line-height:1.4;
+    border-radius:0;
+}
+
+.nav-dropdown a::after{
+    display:none;
+}
+
+.nav-dropdown a:hover,
+.nav-dropdown a:focus-visible{
+    background:rgba(255,255,255,.08);
+    color:#F1D6A6;
+}
+
+.nav-dropdown .arr{
+    opacity:0;
+    transform:translateX(-4px);
+    transition:all .18s ease;
+}
+
+.nav-dropdown a:hover .arr{
+    opacity:1;
+    transform:translateX(0);
+}
 
   /* ---------- Propuesta académica + descarga ---------- */
   .proposal-section{
